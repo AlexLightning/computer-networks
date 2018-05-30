@@ -33,10 +33,10 @@ send(ACK)
 
 for ch in "salut, lume":
     tcp.flags = 'PAEC'
-    #tcp.ack = raspuns_syn_ack.seq + 1
+    tcp.ack = raspuns_syn_ack.seq + 1
     print "Sent: " + ch
     rcv = sr1(ip/tcp/ch)
-    rcv
+    #rcv
     tcp.seq += 1
 
 tcp.flags='R'
